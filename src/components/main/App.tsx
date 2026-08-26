@@ -17,6 +17,7 @@ const AfterPaymentPage = lazy(() => import('@/pages/AfterPaymentPage'));
 const ImportPage = lazy(() => import('@/pages/ImportPage'));
 const PublishPage = lazy(() => import('@/pages/PublishPage'));
 const PortfolioPreviewPage = lazy(() => import('@/pages/PortfolioPreviewPage'));
+const portfolioPreviewEnabled = import.meta.env.DEV || import.meta.env.VITE_ENABLE_PORTFOLIO_PREVIEW === 'true';
 
 const AppMain = withAppWrapper(() => {
   return (
@@ -29,7 +30,7 @@ const AppMain = withAppWrapper(() => {
       <Route path='/as-template' element={<AsTemplatePage />} />
       <Route path='/accept-invitation' element={<AcceptInvitationPage />} />
       <Route path={'/import'} element={<ImportPage />} />
-      {import.meta.env.DEV ? <Route path='/portfolio-preview' element={<PortfolioPreviewPage />} /> : null}
+      {portfolioPreviewEnabled ? <Route path='/portfolio-preview' element={<PortfolioPreviewPage />} /> : null}
       <Route path='/' element={<Navigate to='/app' replace />} />
       <Route path='/app/*' element={<AppRouter />} />
       <Route path='*' element={<NotFound />} />
