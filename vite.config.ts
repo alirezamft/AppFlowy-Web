@@ -22,7 +22,16 @@ function namespaceRedirectPlugin() {
     name: 'namespace-redirect',
     apply: 'serve' as const,
     configureServer(server: { middlewares: { use: (fn: (req: { url?: string; method?: string }, res: { statusCode: number; setHeader: (name: string, value: string) => void; end: () => void }, next: () => void) => void) => void } }) {
-      const ignoredPrefixes = ['/app', '/login', '/import', '/after-payment', '/as-template', '/accept-invitation', '/404'];
+      const ignoredPrefixes = [
+        '/app',
+        '/login',
+        '/import',
+        '/after-payment',
+        '/as-template',
+        '/accept-invitation',
+        '/portfolio-preview',
+        '/404',
+      ];
 
       server.middlewares.use(async (req, res, next) => {
         if (!req.url || req.method !== 'GET') {

@@ -6,6 +6,7 @@ import { useUserWorkspaceInfo } from '@/components/app/app.hooks';
 import NewPage from '@/components/app/view-actions/NewPage';
 import { Workspaces } from '@/components/app/workspaces';
 import { NotificationBell } from '@/components/notifications';
+import { PortfolioSidebarItem } from '@/components/portfolio/PortfolioSidebarItem';
 
 import Outline from 'src/components/app/outline/Outline';
 import { Search } from 'src/components/app/search';
@@ -62,6 +63,8 @@ function SideBar({ drawerWidth, drawerOpened, toggleOpenDrawer, onResizeDrawerWi
             </div>
           )}
         </div>
+
+        <PortfolioSidebarItem />
 
         <Outline width={drawerWidth} />
 
