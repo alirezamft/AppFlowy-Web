@@ -17,7 +17,6 @@ const AfterPaymentPage = lazy(() => import('@/pages/AfterPaymentPage'));
 const ImportPage = lazy(() => import('@/pages/ImportPage'));
 const PublishPage = lazy(() => import('@/pages/PublishPage'));
 const PortfolioPreviewPage = lazy(() => import('@/pages/PortfolioPreviewPage'));
-const portfolioPreviewEnabled = import.meta.env.DEV || import.meta.env.VITE_ENABLE_PORTFOLIO_PREVIEW === 'true';
 
 const AppMain = withAppWrapper(() => {
   return (
@@ -30,7 +29,8 @@ const AppMain = withAppWrapper(() => {
       <Route path='/as-template' element={<AsTemplatePage />} />
       <Route path='/accept-invitation' element={<AcceptInvitationPage />} />
       <Route path={'/import'} element={<ImportPage />} />
-      {portfolioPreviewEnabled ? <Route path='/portfolio-preview' element={<PortfolioPreviewPage />} /> : null}
+      {/* Static review data only; this route intentionally stays outside AuthLayout. */}
+      <Route path='/portfolio-preview' element={<PortfolioPreviewPage />} />
       <Route path='/' element={<Navigate to='/app' replace />} />
       <Route path='/app/*' element={<AppRouter />} />
       <Route path='*' element={<NotFound />} />
