@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "dev:trade-local": "cross-env PORT=5174 APPFLOWY_BASE_URL=http://localhost:5174 APPFLOWY_GOTRUE_BASE_URL=http://localhost:5174/gotrue APPFLOWY_WS_BASE_URL=ws://localhost:5174/ws/v2 APPFLOWY_DEV_API_PROXY_TARGET=http://localhost:8000 vite",
     "dev:coverage": "cross-env COVERAGE=true vite",
     "dev:server": "bun deploy/server.ts",
     "build": "vite build",
