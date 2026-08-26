@@ -3454,7 +3454,7 @@
       "confirmPrivateToCustomDescription": "Everyone else in the Workspace will be able to view this Space. People and groups added as Space members will be able to edit it.",
       "confirmPrivateToCustomAction": "Change access",
       "confirmToPublicTitle": "Make this Space Public?",
-      "confirmToPublicDescription": "Everyone in the Workspace will be able to access this Space. Space members can edit, and the Space creator and Workspace owners have Full access.",
+      "confirmToPublicDescription": "Everyone in the Workspace will be able to access this Space. Workspace members can edit by default, and Workspace owners have Full access. You can change Workspace members’ access to Can view or Full access after switching.",
       "confirmToPublicAction": "Make Public",
       "confirmToPrivateTitle": "Make this Space Private?",
       "confirmToPrivateDescription": "Other Space owners, Space members, and Workspace members will lose access to this Space.",
