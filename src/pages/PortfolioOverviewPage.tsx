@@ -112,7 +112,7 @@ function PortfolioOverviewPage() {
         {state.status === 'loading' ? <LoadingState /> : null}
         {state.status === 'empty' ? <EmptyState onRetry={reload} /> : null}
         {state.status === 'error' ? <ErrorState onRetry={reload} /> : null}
-        {state.status === 'ready' ? <OverviewContent data={state.data} /> : null}
+        {state.status === 'ready' ? <PortfolioOverviewContent data={state.data} /> : null}
       </div>
     </section>
   );
@@ -161,7 +161,7 @@ function ErrorState({ onRetry }: { onRetry: () => void }) {
   );
 }
 
-function OverviewContent({ data }: { data: DomainOverviewResponse }) {
+export function PortfolioOverviewContent({ data }: { data: DomainOverviewResponse }) {
   const { t } = useTranslation();
 
   return (
