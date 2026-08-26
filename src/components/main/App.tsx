@@ -29,8 +29,8 @@ const AppMain = withAppWrapper(() => {
       <Route path='/as-template' element={<AsTemplatePage />} />
       <Route path='/accept-invitation' element={<AcceptInvitationPage />} />
       <Route path={'/import'} element={<ImportPage />} />
-      {/* Static review data only; this route intentionally stays outside AuthLayout. */}
-      <Route path='/portfolio-preview' element={<PortfolioPreviewPage />} />
+      {/* Static review data is development-only and never part of the product runtime. */}
+      {import.meta.env.DEV ? <Route path='/portfolio-preview' element={<PortfolioPreviewPage />} /> : null}
       <Route path='/' element={<Navigate to='/app' replace />} />
       <Route path='/app/*' element={<AppRouter />} />
       <Route path='*' element={<NotFound />} />
