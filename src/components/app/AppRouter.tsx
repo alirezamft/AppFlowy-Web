@@ -1,3 +1,4 @@
+import { lazy } from 'react';
 import { Route, Routes } from 'react-router-dom';
 
 import AppWorkspaceRedirect from '@/components/app/AppWorkspaceRedirect';
@@ -9,6 +10,8 @@ import InviteCode from '@/components/app/landing-pages/InviteCode';
 import AppPage from '@/pages/AppPage';
 import TrashPage from '@/pages/TrashPage';
 
+const PortfolioOverviewPage = lazy(() => import('@/pages/PortfolioOverviewPage'));
+
 function AppRouter() {
   return (
     <Routes>
@@ -16,6 +19,7 @@ function AppRouter() {
         {/* Redirect from /app to /app/:workspaceId after OAuth login */}
         <Route index element={<AppWorkspaceRedirect />} />
         <Route path={':workspaceId'} element={<AppPage />} />
+        <Route path={':workspaceId/portfolio'} element={<PortfolioOverviewPage />} />
         <Route path={':workspaceId/:viewId'} element={<AppPage />} />
         <Route path={'trash'} element={<TrashPage />} />
       </Route>

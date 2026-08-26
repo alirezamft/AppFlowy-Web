@@ -4201,6 +4201,36 @@
   "list": {
     "menuName": "List"
   },
+  "portfolio": {
+    "sidebar": "Portfolio",
+    "overview": {
+      "title": "Portfolio overview",
+      "subtitle": "Delivery progress and outcome health across this workspace",
+      "schema": "Schema {{version}}",
+      "source": "Source code (AGPL)",
+      "loading": "Loading portfolio data…",
+      "emptyTitle": "Portfolio is ready to be configured",
+      "emptyDescription": "Create the native Product, Initiative, Work Item, Metric, and Blocker databases to start projecting delivery data here.",
+      "errorTitle": "Portfolio data is unavailable",
+      "errorDescription": "The workspace is available, but the Portfolio API could not be reached. Check Cloud health and try again.",
+      "retry": "Try again",
+      "domainProgress": "Domain progress",
+      "deliveryCount": "{{done}} of {{total}} in-scope leaves done",
+      "atRisk": "At-risk initiatives",
+      "offTrack": "Off-track initiatives",
+      "criticalBlockers": "Critical blockers",
+      "criticalDependencies": "Critical dependencies",
+      "products": "Products",
+      "outcome": "Outcome metric",
+      "deliveryProgressFor": "Delivery progress for {{product}}"
+    },
+    "health": {
+      "ON_TRACK": "On track",
+      "AT_RISK": "At risk",
+      "OFF_TRACK": "Off track",
+      "UNKNOWN": "Not assessed"
+    }
+  },
   "common": {
     "desktopOnly": "Coming soon to web. Available on desktop & mobile.",
     "editNotSupported": "Editing not supported. Available on desktop & mobile.",
